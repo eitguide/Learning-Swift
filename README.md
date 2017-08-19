@@ -32,6 +32,7 @@ var dicB: [String: Int] = ["One: 1, "Two": 2, "Three": 3]
 
 
 ~~~
+### Permission in iOS
 ~~~xml
 Full List:
 
@@ -105,4 +106,23 @@ Speech Recognition:
 <string>My description about why I need this capability</string>
 ~~~
 
-
+### AlertView iOS
+~~~Swift
+let alertView = UIAlertController(title: "title", message: "Message", preferredStyle: .actionSheet)
+        
+        alertView.addAction(UIAlertAction(title: "OK", style: .default, handler: { (ac) in
+            print("OK")
+        }))
+        
+        alertView.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (ac) in
+            print("Cancle")
+        }))
+        
+//        alertView.addAction(UIAlertAction(title: "Normal", style: .destructive, handler: { (ac) in
+//            print("Normal")
+//        }))
+        
+        self.present(alertView, animated: true) {
+            print("Saved")
+        }
+~~~
